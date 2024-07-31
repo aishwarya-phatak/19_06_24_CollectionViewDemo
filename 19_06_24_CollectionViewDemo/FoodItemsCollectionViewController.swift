@@ -7,12 +7,11 @@
 
 import UIKit
 
-
 class FoodItemsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     private let reuseIdentifierForCollectionViewCell = "FoodItemsCollectionViewCell"
     var foodItems = ["Upma", "Poha", "samosa", "vadapav", "bhaji"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerXIBWithTableView()
@@ -22,28 +21,27 @@ class FoodItemsCollectionViewController: UICollectionViewController, UICollectio
         let uiNib = UINib(nibName: reuseIdentifierForCollectionViewCell, bundle: nil)
         self.collectionView.register(uiNib, forCellWithReuseIdentifier: reuseIdentifierForCollectionViewCell)
     }
-
+    
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-       return 1
+        return 1
     }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foodItems.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let foodItemCollectionViewCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierForCollectionViewCell, for: indexPath) as! FoodItemsCollectionViewCell
         
         foodItemCollectionViewCell.foodItemLabel.text = foodItems[indexPath.item]
         foodItemCollectionViewCell.layer.cornerRadius = 40.0
         foodItemCollectionViewCell.layer.borderColor = CGColor(
-                                                                red: 100.0,
-                                                                green: 0.0,
-                                                                blue: 100.0,
-                                                                alpha: 5.0)
+            red: 100.0,
+            green: 0.0,
+            blue: 100.0,
+            alpha: 5.0)
         foodItemCollectionViewCell.layer.borderWidth = 5.0
         foodItemCollectionViewCell.backgroundColor = .orange
         foodItemCollectionViewCell.backgroundView = UIImageView(image: UIImage(named: "cityIcon"))

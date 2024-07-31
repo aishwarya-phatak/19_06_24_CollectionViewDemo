@@ -17,19 +17,34 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jYz-4q-oz3">
-                        <rect key="frame" x="20" y="60" width="180" height="113"/>
+                        <rect key="frame" x="20" y="60" width="180" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="093-3C-DoF"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6r-gy-Zuj">
+                        <rect key="frame" x="10" y="115" width="200" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="x2Z-5w-r8d"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="W6r-gy-Zuj" firstAttribute="top" secondItem="jYz-4q-oz3" secondAttribute="bottom" constant="5" id="0ZK-vP-IyI"/>
                 <constraint firstItem="jYz-4q-oz3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="7hL-BZ-m6a"/>
                 <constraint firstAttribute="trailing" secondItem="jYz-4q-oz3" secondAttribute="trailing" constant="20" id="CgV-Nr-otS"/>
                 <constraint firstItem="jYz-4q-oz3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="60" id="IhD-17-HJA"/>
-                <constraint firstAttribute="bottom" secondItem="jYz-4q-oz3" secondAttribute="bottom" constant="40" id="cCI-nV-fPK"/>
+                <constraint firstItem="W6r-gy-Zuj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="JA2-wg-X5A"/>
+                <constraint firstAttribute="trailing" secondItem="W6r-gy-Zuj" secondAttribute="trailing" constant="10" id="WDT-Ga-fXp"/>
             </constraints>
             <size key="customSize" width="220" height="213"/>
             <connections>
+                <outlet property="nameLabel" destination="W6r-gy-Zuj" id="0Jj-N3-gbp"/>
                 <outlet property="studentImageView" destination="jYz-4q-oz3" id="Wyf-C5-9Vq"/>
             </connections>
             <point key="canvasLocation" x="-1505.3435114503816" y="41.901408450704224"/>

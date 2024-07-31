@@ -8,12 +8,12 @@
 import UIKit
 
 class FoodItemsCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var foodItemLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
     }
-
 }
